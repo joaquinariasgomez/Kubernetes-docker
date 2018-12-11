@@ -2,7 +2,7 @@
 
 DOCKER_VERSION="18.03.0~ce-0~ubuntu"
 KUBERNETES_VERSION="1.10.1"
-MINIKUBE_VERSION="0.27.0"
+MINIKUBE_VERSION="0.25.0"
 # Cannot upgrade helm to, i.e., 2.10.0 due to cluster servers imcompatibility
 HELM_VERSION="2.8.2"
 ISTIO_VERSION="1.0.1"
