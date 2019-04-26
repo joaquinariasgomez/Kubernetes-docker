@@ -182,6 +182,59 @@ export default class Presentation extends React.Component {
             </Slide>
 
 
+            <Slide progressColor="white" bgColor="#f05033" transition={['slide']}>
+              <Heading fill textColor="white" lineHeight="1.25">
+                Docker
+              </Heading>
+            </Slide>
+
+
+            <Slide transition={['slide']} progressColor="black">
+              <Heading size={5} lineHeight="1.25">
+                Docker and containers
+              </Heading>
+              <Layout>
+                <Text height={70}>
+                  &nbsp;
+                </Text>
+              </Layout>
+              <Text fill textAlign="justify">
+              The idea behind Docker is to create lightweight and portable containers so that apps can run on any machine with Docker installed.
+              </Text>
+              <Layout>
+                <Text height={80}>
+                  &nbsp;
+                </Text>
+              </Layout>
+              <Text fill textAlign="justify">
+              Developers can then not worry about whether their application will work on the machine it will actually run on.
+              </Text>
+            </Slide>
+
+
+            <Slide transition={['slide']} progressColor="black">
+              <Heading size={5} lineHeight="1.25">
+                Docker and containers
+              </Heading>
+              <Layout>
+                <Text height={50}>
+                  &nbsp;
+                </Text>
+              </Layout>
+              <Text fill textAlign="justify">
+              A container is a single isolated process running in the host OS.
+              </Text>
+              <Layout>
+                <Text height={50}>
+                  &nbsp;
+                </Text>
+              </Layout>
+              <Text fill textAlign="justify">
+              Compared to VMs, containers are much more lightweight, which allows you to run higher number of software components on the same hardware, mainly because each VM nees to run its own set of system processes.
+              </Text>
+            </Slide>
+
+
             <Slide progressColor="black">
             <Notes>
             Para entender Docker y Kubernetes, vamos a ejecutar esta charla de forma práctica.
@@ -306,7 +359,7 @@ export default class Presentation extends React.Component {
 
             <Slide progressColor="white" bgColor="#f05033">
               <Heading fill textColor="white" lineHeight="1.25">
-                First steps with Docker and Kubernetes
+                First steps with Docker
               </Heading>
             </Slide>
 
@@ -842,7 +895,14 @@ export default class Presentation extends React.Component {
 
             <Slide progressColor="white" bgColor="#f05033" transition={['slide']}>
               <Heading fill textColor="white" lineHeight="1.25">
-                Setting up a cluster in Kubernetes
+                Kubernetes
+              </Heading>
+            </Slide>
+
+
+            <Slide progressColor="white" bgColor="#f05033" transition={['slide']}>
+              <Heading fill textColor="white" lineHeight="1.25">
+                Setting up a cluster
               </Heading>
             </Slide>
 
