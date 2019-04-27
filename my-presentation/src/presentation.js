@@ -47,6 +47,8 @@ import graphic3 from './images/graphic3.png';
 import graphic4 from './images/graphic4.png';
 import graphic5 from './images/graphic5.png';
 import graphic6 from './images/graphic6.png';
+import graphic7 from './images/graphic7.png';
+import graphic8 from './images/graphic8.png';
 
 import kubernetes_logo from './images/kubernetes_logo.png';
 import kubernetes_text from './images/kubernetes_text.png';
@@ -89,7 +91,7 @@ export const Prompt = () => (
 );*/
 const theme = createTheme({
   primary: "white",
-  secondary: "#03A9FC",
+  secondary: "black",//"#03A9FC",
   tertiary: "#03A9FC",
   quarternary: "#CECECE"
 }, {
@@ -900,6 +902,47 @@ export default class Presentation extends React.Component {
             </Slide>
 
 
+            <Slide progressColor="black">
+                <Text fill textAlign="justify">
+                  Kubernetes is an open source system created by Google for the management of applications in containers, an orchestration system for Docker containers, allowing actions such as scheduling the deployment, scaling and monitoring of our containers.
+                </Text>
+            </Slide>
+
+
+            <Slide progressColor="#d2d2d2">
+              <Image src={graphic7}/>
+            </Slide>
+
+
+            <Slide transition={['slide']} progressColor="black">
+              <Heading size={5} lineHeight="1.25">
+                Understanding the architecture of a Kubernetes cluster
+              </Heading>
+              <Layout>
+                <Text height={50}>
+                  &nbsp;
+                </Text>
+              </Layout>
+              <Text fill textAlign="justify">
+              A Kubernetes cluster is composed of a set of nodes of two types.
+              </Text>
+              <List>
+                <ListItem textAlign="justify">Master node, which contains the Control Plane. Its job is to control the cluster.
+                </ListItem>
+                <Text height={23}>
+                  &nbsp;
+                </Text>
+                <ListItem textAlign="justify">Worker nodes, which will actually run the application.
+                </ListItem>
+              </List>
+            </Slide>
+
+
+            <Slide progressColor="#d2d2d2">
+              <Image src={graphic8}/>
+            </Slide>
+
+
             <Slide progressColor="white" bgColor="#f05033" transition={['slide']}>
               <Heading fill textColor="white" lineHeight="1.25">
                 Setting up a cluster
@@ -966,7 +1009,7 @@ export default class Presentation extends React.Component {
                 </Layout>
 
                 <Text fill textAlign="justify">
-                  Since we are telling Kubernetes to create a replication controller instead of a deployment, we can check that it is present by running:
+                  Since we are telling Kubernetes to create a replication controller, we can check that it is present by running:
                 </Text>
 
                 <Layout>
@@ -1061,52 +1104,133 @@ export default class Presentation extends React.Component {
                 </Layout>
             </Slide>
 
+
             <Slide progressColor="#d2d2d2">
               <Image src={graphic5}/>
             </Slide>
 
 
-            <Slide transition={['fade']} bgColor="tertiary">
-              <Heading size={6} textColor="primary" caps>
-                Typography
+            <Slide progressColor="white" bgColor="#f05033" transition={['slide']}>
+              <Heading fill textColor="white" lineHeight="1.25">
+                Horizontally scaling your application
               </Heading>
-              <Heading size={1} textColor="secondary">
-                Heading 1
-              </Heading>
-              <Heading size={2} textColor="secondary">
-                Heading 2
-              </Heading>
-              <Heading size={3} textColor="secondary">
-                Heading 3
-              </Heading>
-              <Heading size={4} textColor="secondary">
-                Heading 4
-              </Heading>
-              <Heading size={5} textColor="secondary">
-                Heading 5
-              </Heading>
-              <Text size={6} textColor="secondary">
-                Standard text
+            </Slide>
+
+
+            <Slide transition={['slide']} progressColor="black">
+              <Text fill textAlign="justify">
+              To scale up the number of replicas of your pod, you need to change the desired replica count on the ReplicationController like this:
               </Text>
+              <Layout>
+                <Text height={50}>
+                  &nbsp;
+                </Text>
+              </Layout>
+              <Layout>
+                <Fill>
+                  <Text bold textAlign="left" textSize="1.2em" textColor="black">
+                    <Prompt/>
+                    kubectl scale rc kubia --replicas=3
+                  </Text>
+                </Fill>
+              </Layout>
             </Slide>
 
-            <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-              <Heading size={6} textColor="secondary" caps>
-                Standard List
+
+            <Slide progressColor="white" bgColor="#f05033" transition={['slide']}>
+              <Heading fill textColor="white" lineHeight="1.25">
+                Kubernetes Dashboard
               </Heading>
-              <List>
-                <ListItem>Item 1</ListItem>
-                <ListItem>Item 2</ListItem>
-                <ListItem>Item 3</ListItem>
-                <ListItem>Item 4</ListItem>
-              </List>
             </Slide>
 
-            <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-              <BlockQuote>
-                <Quote>Example Quote</Quote>
-                <Cite>DEM</Cite>
-              </BlockQuote>
+
+            <Slide transition={['slide']} progressColor="black">
+              <Text fill textAlign="justify">
+              The dashboard allows you to watch all the events that kubectl showed you graphically.
+              </Text>
+              <Layout>
+                <Text height={50}>
+                  &nbsp;
+                </Text>
+              </Layout>
+              <Text fill textAlign="justify">
+              To obtain its private url, we can run the following command.
+              </Text>
+              <Layout>
+                <Text height={50}>
+                  &nbsp;
+                </Text>
+              </Layout>
+              <Layout>
+                <Fill>
+                  <Text bold textAlign="left" textSize="1.2em" textColor="black">
+                    <Prompt/>
+                    minikube dashboard --url
+                  </Text>
+                </Fill>
+              </Layout>
+            </Slide>
+
+
+            <Slide transition={['fade']} bgColor="primary" progressColor="#394d54">
+            <Notes>
+            Contar un poco el hecho de que no se vea en la UCA pero sí en el trabajo etc. Link del proyecto. La charla será un tanto práctica. Podéis interrumpirme en cualquier momento para preguntar dudas.
+            </Notes>
+              <Heading fit textColor="black">
+                Introduction to Docker and Kubernetes
+              </Heading>
+
+              <Layout>
+                <Text height={80}>
+                  &nbsp;
+                </Text>
+              </Layout>
+
+              <Layout>
+                <Fill>
+                  <Heading size={1} textColor="secondary" margin={0}>
+                    <Image src={kubernetes_logo}/>
+                  </Heading>
+                </Fill>
+                <Fill>
+                  <Heading size={1} textColor="secondary" margin={0}>
+                    <Image src={kubernetes_text}/>
+                  </Heading>
+                  <Heading size={1} textColor="secondary" margin={0}>
+                    <Image src={docker_text}/>
+                  </Heading>
+                </Fill>
+                <Fill>
+                  <Heading size={1} textColor="secondary" margin={0}>
+                    <Image src={docker_logo}/>
+                  </Heading>
+                </Fill>
+              </Layout>
+
+              <Layout>
+                <Text height={30}>
+                  &nbsp;
+                </Text>
+              </Layout>
+
+              <Heading size={6} textColor="#394d54">
+                José Joaquín Arias
+              </Heading>
+
+              <Layout>
+                <Text height={10}>
+                  &nbsp;
+                </Text>
+              </Layout>
+
+              <Layout>
+                <Fill>
+                  <Text bold textSize="0.5em" textColor="#394d54">
+                    <GitHub/>
+                    github.com/joaquinariasgomez/Kubernetes-docker
+                  </Text>
+                </Fill>
+              </Layout>
             </Slide>
 
           </Deck>
