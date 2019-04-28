@@ -37,8 +37,6 @@ tar xvzf helm-v${HELM_VERSION}-linux-amd64.tar.gz
 sudo mv linux-amd64/helm /usr/local/bin
 helm init --wait
 
-# pip3
-#sudo apt-get install -y python3-pip
 
 #Firefox
 sudo apt install -y firefox

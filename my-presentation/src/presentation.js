@@ -232,7 +232,7 @@ export default class Presentation extends React.Component {
                 </Text>
               </Layout>
               <Text fill textAlign="justify">
-              Compared to VMs, containers are much more lightweight, which allows you to run higher number of software components on the same hardware, mainly because each VM nees to run its own set of system processes.
+              Compared to VMs, containers are much more lightweight, which allows you to run higher number of software components on the same hardware, mainly because each VM needs to run its own set of system processes.
               </Text>
             </Slide>
 
@@ -351,7 +351,7 @@ export default class Presentation extends React.Component {
                     ]
                     }, {
                       loc: [
-                        40, 45
+                        41, 43
                       ]
                   }
 
@@ -1146,7 +1146,7 @@ export default class Presentation extends React.Component {
 
             <Slide transition={['slide']} progressColor="black">
               <Text fill textAlign="justify">
-              The dashboard allows you to watch all the events that kubectl showed you graphically.
+              The dashboard allows us to watch all the events that kubectl ran and more, but graphically.
               </Text>
               <Layout>
                 <Text height={50}>
